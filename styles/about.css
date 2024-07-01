@@ -1,0 +1,32 @@
+div.about {
+  background-color: black;
+  padding: 1rem 1.5rem;
+}
+
+div.about-container {
+  display: flex;
+  gap: 3rem;
+}
+div.about-container > div.left-content > img {
+  max-height: 400px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: top;
+}
+div.about-container > div.right-content > p {
+  margin-top: 0.75rem;
+  text-align: justify;
+}
+
+@media (max-width: 750px) {
+  div.about {
+    padding: 2rem;
+  }
+  div.about-container {
+    flex-direction: column;
+  }
+  div.about-container > div.left-content > img {
+    width: 100%;
+    max-height: 600px;
+  }
+}

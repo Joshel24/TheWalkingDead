@@ -1,0 +1,106 @@
+div.episodes-container {
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  justify-items: center;
+}
+
+div.episode {
+  display: grid;
+  grid-template-areas:
+    "img desc desc"
+    "plot plot plot";
+  background-color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px wheat;
+  width: 100%;
+  height: fit-content;
+  max-width: 900px;
+}
+
+div.episode > div.left-container {
+  grid-area: img;
+}
+div.episode > div.right-container {
+  grid-area: desc;
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+div.episode > div.bottom-container {
+  grid-area: plot;
+
+  height: 0;
+  transition: all 300ms ease;
+  overflow: hidden;
+}
+div.episode > div.bottom-container.show {
+  height: 100%;
+  margin-top: 1rem;
+}
+div.episode > div.left-container > img {
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+div.episode > div.right-container > button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: wheat;
+  color: black;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+div.episode > div.right-container > button:hover {
+  box-shadow: 0 0 4px white;
+}
+div.episode > div.right-container > button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 460px) {
+  div.episode {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    overflow: hidden;
+  }
+
+  div.episode > div.bottom-container.show,
+  div.episode > div.right-container {
+    padding: 1rem;
+  }
+  div.episode > div.left-container {
+    height: 100%;
+  }
+}
+
+span.plot > p.sentence {
+  margin-top: 0.5rem;
+}
+span.plot > p.sentence,
+span.desc {
+  text-align: justify;
+  text-shadow: 0 0 5px black;
+  line-height: 1.5rem;
+}
+span.plot > p.sentence::first-letter,
+span.desc::first-letter {
+  margin-left: 1rem;
+}
+span.desc > b {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.15rem;
+}

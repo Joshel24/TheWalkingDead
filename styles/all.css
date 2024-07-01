@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+div.container {
+  min-height: 100vh;
+}
+
+/* background */
+div.home > h1 {
+  text-shadow: 0 0 5px black;
+  text-wrap: nowrap;
+}
+div.home > h1.main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(1.75rem, -0.5rem + 6.4vw, 4rem);
+}
+div.home > h1.main-title > span.sub-title {
+  font-size: 1.25rem;
+  text-align: right;
+}
+
+li:has(> a.nav-button) {
+  list-style: none;
+}
+a {
+  color: inherit;
+}
+
+div.nav-distination > h1 {
+  text-align: center;
+  padding-top: 0.75rem;
+  text-shadow: 0 0 5px black;
+}
+
+p,
+span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+a,
+p.name,
+span.number,
+span.title,
+h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+/* copyright */
+div.left-content,
+div.left-container {
+  position: relative;
+}
+div.left-content::after {
+  content: "https://walkingdead.fandom.com/wiki/Season_1_(TV_Series)";
+}
+div.left-container::after {
+  content: "https://walkingdead.fandom.com/wiki/Season_1_(TV_Series)#Plot";
+}
+div.card::after {
+  content: "https://walkingdead.fandom.com/wiki/Season_1_(TV_Series)#Cast";
+}
+div.left-content::after,
+div.left-container::after,
+div.card::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-shadow: 0 0 5px white, 0 0 10px black;
+}

@@ -1,0 +1,47 @@
+footer.footer {
+  background-color: black;
+  min-height: 30vh;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+
+footer.footer > p {
+  position: absolute;
+  bottom: 25px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+footer.footer > h1 {
+  text-shadow: 0 0 5px black;
+  text-wrap: nowrap;
+}
+footer.footer > h1.main-title {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translate(-50%, -35%);
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(1.75rem, -0.5rem + 6.4vw, 4rem);
+}
+footer.footer > h1.main-title > span.sub-title {
+  font-size: 1.25rem;
+  text-align: right;
+}
+
+footer.footer > span {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.75rem;
+}
+footer.footer > span > a {
+  text-transform: uppercase;
+}
+footer.footer > span > a:hover {
+  color: rebeccapurple;
+}
